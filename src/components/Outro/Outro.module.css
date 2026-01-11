@@ -1,0 +1,21 @@
+.outro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e8e8e0;
+  color: #1a1a1a;
+  padding: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .outro {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .outro {
+    padding: 1rem;
+  }
+}

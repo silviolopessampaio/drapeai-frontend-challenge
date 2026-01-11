@@ -1,0 +1,119 @@
+.tooltip {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #1a1a1a;
+}
+
+.tooltipRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #1a1a1a;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.divider {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background-color: #8a8a7a;
+  margin: 0.5rem 0;
+  transform: scaleX(0);
+}
+
+.tooltip .divider {
+  transform-origin: right center;
+}
+
+.tooltipRight .divider {
+  transform-origin: left center;
+}
+
+.icon {
+  font-size: 2.5rem;
+  overflow: hidden;
+}
+
+.description {
+  color: #4a4a4a;
+  overflow: hidden;
+}
+
+.tooltipRight .icon,
+.tooltipRight .title,
+.tooltipRight .divider,
+.tooltipRight .description {
+  width: 70%;
+}
+
+.title {
+  overflow: hidden;
+}
+
+.icon ion-icon {
+  position: relative;
+  display: block;
+  transform: translateY(125%);
+  will-change: transform;
+}
+
+.title :global(.line),
+.description :global(.line) {
+  overflow: hidden;
+}
+
+.title :global(.line) > span,
+.description :global(.line) > span {
+  position: relative;
+  display: block;
+  transform: translateY(125%);
+  will-change: transform;
+}
+
+@media (max-width: 768px) {
+  .icon {
+    font-size: 2rem;
+  }
+
+  .tooltipRight {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .tooltip,
+  .tooltipRight {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .tooltipRight .icon,
+  .tooltipRight .title,
+  .tooltipRight .divider,
+  .tooltipRight .description {
+    width: 100%;
+  }
+
+  .divider {
+    width: 100%;
+  }
+
+  .tooltip .divider,
+  .tooltipRight .divider {
+    transform-origin: right center;
+  }
+}
+
+@media (max-width: 480px) {
+  .icon {
+    font-size: 1.75rem;
+  }
+
+  .tooltip,
+  .tooltipRight {
+    gap: 0.75rem;
+  }
+}
